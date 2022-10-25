@@ -1,3 +1,3 @@
 # blog
 博客项目
-front 是前端工程，bolg 是后端工程
+front 是前端Vue工程，bolg 是后端SpringBoot工程
