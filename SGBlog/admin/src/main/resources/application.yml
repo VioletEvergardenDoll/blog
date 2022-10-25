@@ -1,0 +1,32 @@
+server:
+  port: 8989
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  文件上传大小限制
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    #逻辑删除字段配置
+    db-config:
+      #字段名
+      logic-delete-field: delFlag
+      #删除值
+      logic-delete-value: 1
+      #未删除值
+      logic-not-delete-value: 0
+      id-type: auto
+oss:
+  accessKey: 5fEP7bFUjDbNvJGKxryLNHSWJs1vU7fNyigIUXXG
+  secretKey: xgR3Ck12YmY7LT15O3_o9iFRL-NRVuSyzB0T-MGO
+  bucket: ve-blog
